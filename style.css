@@ -1,0 +1,109 @@
+/* 
+## Colors
+
+### Primary
+
+- Yellow: hsl(47, 88%, 63%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Grey: hsl(0, 0%, 50%)
+- Black: hsl(0, 0%, 7%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 16px
+
+### Font
+
+- Family: [Figtree](https://fonts.google.com/specimen/Figtree)
+- Weights: 500, 800
+ */
+@import url(https://fonts.google.com/specimen/Figtree);
+:root {
+  --Yellow: hsl(47, 88%, 63%);
+  --White: hsl(0, 0%, 100%);
+  --Grey: hsl(0, 0%, 50%);
+  --Black: hsl(0, 0%, 7%);
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  min-height: 100vh;
+  font-size: 1.6rem;
+  font-family: "Figtree", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--Yellow);
+  font-weight: 500;
+  color: var(--Black);
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 45rem;
+  background: var(--White);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 2px solid var(--Black);
+  box-shadow: var(--Black) 12px 12px;
+}
+.card-img {
+  overflow: hidden;
+  border-radius: 7px;
+  margin-bottom: 2rem;
+}
+.card-label {
+  background: var(--Yellow);
+  color: var(--Black);
+  padding: 0.5rem 1rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  display: inline-block;
+}
+.card-published-date {
+  margin-bottom: 2rem;
+}
+.card-heading {
+  font-weight: 800;
+  color: var(--Black);
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.card-heading:hover {
+  color: var(--Yellow);
+}
+.card-description {
+  color: var(--Grey);
+  width: 35rem;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+.card-author-box {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.card-author-img {
+  width: 4rem;
+  height: 4rem;
+}
+.card-author {
+  color: var(--Black);
+  font-weight: 800;
+}
